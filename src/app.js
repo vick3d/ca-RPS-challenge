@@ -1,16 +1,22 @@
+const renderMessage = (button) => {
+    let div = document.querySelector('.message')
+    div.innerHTML = `<p>Your choice was ${button}</p>`
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const rock = document.querySelector('.rock')
     const paper = document.querySelector('.paper')
     const scissors = document.querySelector('.scissors')
 
     rock.addEventListener('click',event => {
-        console.log('rock clicked')
+        renderMessage("Rock")
     })
     paper.addEventListener('click',event => {
-        console.log('paper clicked')
+        renderMessage("Paper")
     })
     scissors.addEventListener('click',event => {
-        console.log('scissors-clicked')
+        renderMessage("Scissors")
     })
 
 })
